@@ -1,0 +1,17 @@
+{
+  "name": "node_yt_project",
+  "version": "1.0.0",
+  "description": "Node and express test app yt",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "Seba",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.15",
+    "pug": "^2.0.3"
+  }
+}

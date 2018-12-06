@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h1 #{title}
+    form(method='POST', action='/articles/add')
+        lable Title:
+        input(name='title', type='text')
+        lable author:
+        input(name='author', type='text')
+        lable Title:
+        textarea(name='body')
+        input(type="submit" value="SUBMIT")
