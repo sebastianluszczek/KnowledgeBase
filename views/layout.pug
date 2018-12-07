@@ -2,9 +2,20 @@ doctype html
 html
     head
         title KnowledgeBase
+        link(rel="stylesheet", href="/style.css")
     body
-        block content
+        nav
+            .contener
+                h3 KnowledgeBase
+                ul
+                    li
+                        a(href="/") Home
+                    li
+                        a(href="/articles/add") Add Article
+        .contener
+            block content
         br
-        hr
         footer
-            p Copyright &copy; 2018
+            hr
+            .contener
+                p Copyright &copy; 2018

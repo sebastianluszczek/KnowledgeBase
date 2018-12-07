@@ -39,6 +39,9 @@ app.use(bodyParser.json())
 app.set('vievs', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+// set public folder
+app.use(express.static(path.join(__dirname, 'public')));
+
 // home route
 app.get('/', (req, res) => {
     Article.find({}, (err, articles) => {
@@ -53,11 +56,22 @@ app.get('/', (req, res) => {
     });
 });
 
+
+
 // add route
 app.get('/articles/add', (req, res) => {
     res.render('add_article', {
         title: 'Add article'
     });
+});
+
+// specific article route
+app.get('/articles/:id', (req, res) => {
+    Article.findById(req.params.id, (err, article) => {
+        res.render('article', {
+            article: article
+        });
+    })
 });
 
 // add submite post route
