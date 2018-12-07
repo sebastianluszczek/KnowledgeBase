@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h1 #{title}
+    form(method='POST', action='/articles/edit/'+article._id)
+        lable Title:
+        input(name='title', type='text', value=article.title)
+        lable Author:
+        input(name='author', type='text', value=article.author)
+        lable Content:
+        textarea(name='body')= article.body
+        input(type="submit" value="EDIT")
